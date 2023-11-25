@@ -47,3 +47,9 @@
   background: #ddd;
   color: black;
 }
+.cardVideosContainer{
+  display: flex;
+  width: 640px;
+  height: 360px;
+  object-fit: cover;
+}

@@ -31,7 +31,7 @@ const characters = [
     `;
     cardContainer.innerHTML += cardTemplate;
 }
-let video = document.getElementById("myVideo");
+let video = document.getElementById("starWars");
 let btn = document.getElementById("videoBtn");
 function myFunction() {
   if (video.paused) {

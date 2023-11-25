@@ -30,11 +30,9 @@ const characters = [
       <div class="card">
         <img src="${characters[i].image}" alt="${characters[i].name}">
         <p>${characters[i].name}</p>
-        <button class="card-button">See more</button>
-        <div class="cardVideosContainer">
-          <video id="${characters[i].video}">
-          <source src="${characters[i].video}" type="video/mp4">
-          </video>
+        <button onclick="showVideos()">See More</button>
+        <div id="videoContainer">        
+          <iframe width="560" height="315" id="${characters[i].video}" allowfullscreen></iframe>
         </div>
       </div>
     `;
@@ -51,4 +49,3 @@ function videoPasuePlay() {
     btn.innerHTML = "Play";
   }
 }
-

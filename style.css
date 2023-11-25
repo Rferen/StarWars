@@ -35,21 +35,11 @@
   border-radius: 25px;
   gap: 10px;
 }
-#videoBtn {
-  width: 200px;
-  font-size: 18px;
-  padding: 10px;
-  border: none;
-  background: #000;
-  color: #fff;
-}
-#videoBtn:hover {
-  background: #ddd;
-  color: black;
-}
-.cardVideosContainer{
-  display: flex;
-  width: 640px;
-  height: 360px;
-  object-fit: cover;
+#videoContainer {
+  display: none; /* Elrejtjük alapból a videókat */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
 }

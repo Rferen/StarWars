@@ -31,3 +31,14 @@ const characters = [
     `;
     cardContainer.innerHTML += cardTemplate;
 }
+let video = document.getElementById("myVideo");
+let btn = document.getElementById("videoBtn");
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}

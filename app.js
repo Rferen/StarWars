@@ -1,18 +1,4 @@
 const cardContainer = document.querySelector('#card-container');
-
-
-
-cardContainer.innerHTML += cardTemplate;
-
-for(let i = 0; i < characters.length; i++){
-  cardContainer.innerHTML += cardTemplate;
-  const cardTemplate = `
-  <div class="card">
-    <img src="${character.image}" alt="${character.name}">
-    <p>${character.name}</p>
-  </div>
-`;
-}
 const characters = [
     {
       id: 1,
@@ -35,3 +21,12 @@ const characters = [
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDcpaktCWrELo5qwJJ-rEzvCZJQz0IC2oJp4XtEZe8jtqKjnMRlTLybF9_RhPeDa3MrXY&usqp=CAU',
     },
   ];
+  for(let i = 0; i < characters.length; i++){
+    const cardTemplate = `
+      <div class="card">
+        <img src="${characters[i].image}" alt="${characters[i].name}">
+        <p>${characters[i].name}</p>
+      </div>
+    `;
+    cardContainer.innerHTML += cardTemplate;
+}

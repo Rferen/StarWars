@@ -2,6 +2,11 @@
   display: flex;
   justify-content: center;
 }
+.container{
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
 #video{
   width: 100%;
   height: 450px;

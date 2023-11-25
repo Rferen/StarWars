@@ -1,13 +1,18 @@
 const cardContainer = document.querySelector('#card-container');
 
-const cardTemplate = `
+
+
+cardContainer.innerHTML += cardTemplate;
+
+for(let i = 0; i < characters.length; i++){
+  cardContainer.innerHTML += cardTemplate;
+  const cardTemplate = `
   <div class="card">
     <img src="${character.image}" alt="${character.name}">
     <p>${character.name}</p>
   </div>
 `;
-
-cardContainer.innerHTML += cardTemplate;
+}
 const characters = [
     {
       id: 1,

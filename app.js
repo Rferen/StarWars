@@ -26,6 +26,7 @@ const characters = [
       <div class="card">
         <img src="${characters[i].image}" alt="${characters[i].name}">
         <p>${characters[i].name}</p>
+        <button class="card-button">See more</button>
       </div>
     `;
     cardContainer.innerHTML += cardTemplate;

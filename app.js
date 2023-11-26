@@ -38,14 +38,3 @@ const characters = [
     `;
     cardContainer.innerHTML += cardTemplate;
 }
-let video = document.getElementById("starWars");
-let btn = document.getElementById("videoBtn");
-function videoPasuePlay() {
-  if (video.paused) {
-    video.play();
-    btn.innerHTML = "Pause";
-  } else {
-    video.pause();
-    btn.innerHTML = "Play";
-  }
-}

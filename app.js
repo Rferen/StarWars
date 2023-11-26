@@ -28,12 +28,12 @@ const characters = [
   for(let i = 0; i < characters.length; i++){
     const cardTemplate = `
       <div class="card">
-        <img src="${characters[i].image}" alt="${characters[i].name}">
-        <p>${characters[i].name}</p>
+        <img class="card-img" src="${characters[i].image}" alt="${characters[i].name}">
+        <p class="character-name">${characters[i].name}</p>
         <button onclick="showVideos()">See More</button>
-        <div id="videoContainer">        
-          <iframe width="560" height="315" id="${characters[i].video}" allowfullscreen></iframe>
-        </div>
+        // <div id="videoContainer">        
+        //   <iframe width="560" height="315" id="${characters[i].video}" allowfullscreen></iframe>
+        // </div>
       </div>
     `;
     cardContainer.innerHTML += cardTemplate;

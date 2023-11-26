@@ -25,16 +25,29 @@ const characters = [
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDcpaktCWrELo5qwJJ-rEzvCZJQz0IC2oJp4XtEZe8jtqKjnMRlTLybF9_RhPeDa3MrXY&usqp=CAU',
     },
   ];
-  for(let i = 0; i < characters.length; i++){
+  for (let i = 0; i < characters.length; i++) {
     const cardTemplate = `
       <div class="card">
         <img class="card-img" src="${characters[i].image}" alt="${characters[i].name}">
         <p class="character-name">${characters[i].name}</p>
-        <button onclick="showVideos()">See More</button>
-        // <div id="videoContainer">        
-        //   <iframe width="560" height="315" id="${characters[i].video}" allowfullscreen></iframe>
-        // </div>
+        <button onclick="showVideos(${i})">See More</button>
+        <div id="videoContainer${i}" style="display: none;">        
+          <iframe width="560" height="315" src="${characters[i].video}" allowfullscreen></iframe>
+        </div>
       </div>
     `;
     cardContainer.innerHTML += cardTemplate;
+}
+
+function showVideos(index) {
+    const videoContainer = document.getElementById(`videoContainer${index}`);
+
+    // Ellenőrizzük, hogy a videókonténer látható-e vagy sem
+    if (videoContainer.style.display === 'none') {
+        // Ha nem látható, akkor megjelenítjük
+        videoContainer.style.display = 'block';
+    } else {
+        // Ha látható, akkor elrejtjük
+        videoContainer.style.display = 'none';
+    }
 }

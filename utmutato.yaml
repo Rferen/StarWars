@@ -1,0 +1,4 @@
+- fetch kéréssel lekérni a 'characters' adatait a 'https://mocki.io/v1/7e215178-20c4-4b8c-8ce5-302b33e1a2e9' url-ről
+- a fetch előtt legyen egy 'await' keyword, így:
+- 'const characters = await fetch(url).then(res => res.json());'
+- Nézd meg a 'Network' tabot. A kérésen nézd meg a Headers, Preview, Response tabokat

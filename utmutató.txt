@@ -1,5 +1,0 @@
-red dath vader
-black luke skywalker?
-white horse yoda?
-Pale Horse palpatine
-cardContainer.innerHTML += cardTemplate;

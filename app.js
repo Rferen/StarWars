@@ -1,5 +1,6 @@
 const cardContainer = document.querySelector('#card-container');
-
+const url = "https://mocki.io/v1/7e215178-20c4-4b8c-8ce5-302b33e1a2e9";
+const characters = await fetch(url).then(res => res.json());
 async function main() {
   for (let i = 0; i < characters.length; i++) {
     const cardTemplate = `
